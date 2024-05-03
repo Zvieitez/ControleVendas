@@ -8,9 +8,9 @@
 <hr />
 
 <form asp-action="Create">
-<div class="row">
-    <div class="col-md-4">
-        
+    <div class="row">
+        <div class="col-md-4">
+
 
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
@@ -19,45 +19,38 @@
                 <span asp-validation-for="CartaoCred" class="text-danger"></span>
             </div>
         </div>
-</div>
-            
- <div class="row">
+    </div>
+
+    <div class="row">
         <div class="col-md-4">
             <div class="form-group">
                 <label asp-for="CartaoDeb" class="control-label"></label>
                 <input asp-for="CartaoDeb" class="form-control" />
                 <span asp-validation-for="CartaoDeb" class="text-danger"></span>
             </div>
-     </div>
-  </div>
+        </div>
+    </div>
 
-  <div class="row">
-    <div class="col-md-4">
-          <div class="form-group">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
                 <label asp-for="Pix" class="control-label"></label>
                 <input asp-for="Pix" class="form-control" />
                 <span asp-validation-for="Pix" class="text-danger"></span>
             </div>
+        </form>
     </div>
 </div>
-
-<p> </p>
-
-<div class="row">
-    <div class="col-md-4">
-            <div class="form-group">
-                <input type="submit" value="Criar" class="btn btn-outline-info" />
-            </div>
-    </div>
-</div>
-</form>
 
 <p> </p>
 
 <div>
+    <a asp-action="Index" class="btn btn-outline-info" type="submit">Criar</a>
     <a asp-action="Index" class="btn btn-primary">Voltar</a>
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
