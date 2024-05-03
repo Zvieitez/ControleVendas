@@ -20,5 +20,6 @@ namespace SistControleVendas.Data
         public DbSet<SistControleVendas.Models.Venda> Venda { get; set; } = default!;
         public DbSet<SistControleVendas.Models.FormaPagto> FormaPagto { get; set; } = default!;
         public DbSet<SistControleVendas.Models.Login> Login { get; set; } = default!;
+        public DbSet<SistControleVendas.Models.Produto> Produto { get; set; } = default!;
     }
 }

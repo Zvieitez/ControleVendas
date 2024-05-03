@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SistControleVendas.Data;
 
@@ -11,9 +12,11 @@ using SistControleVendas.Data;
 namespace SistControleVendas.Migrations
 {
     [DbContext(typeof(ControleVendasContext))]
-    partial class ControleVendasContextModelSnapshot : ModelSnapshot
+    [Migration("20240503120956_sextomigration")]
+    partial class sextomigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
