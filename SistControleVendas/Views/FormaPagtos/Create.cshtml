@@ -4,9 +4,7 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Forma de Pagamento</h1>
-
-<h4>Cadastrar Nova</h4>
+<h1>Cadastrar Forma de Pagamento</h1>
 <hr />
 
 <form asp-action="Create">
@@ -43,19 +41,21 @@
     </div>
 </div>
 
+<p> </p>
+
 <div class="row">
     <div class="col-md-4">
             <div class="form-group">
-                <input type="submit" value="Criar" class="btn btn-primary" />
+                <input type="submit" value="Criar" class="btn btn-outline-info" />
             </div>
     </div>
 </div>
+</form>
 
-
- </form>
+<p> </p>
 
 <div>
-    <a asp-action="Index">Voltar</a>
+    <a asp-action="Index" class="btn btn-primary">Voltar</a>
 </div>
 
 @section Scripts {
