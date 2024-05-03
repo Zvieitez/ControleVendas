@@ -1,0 +1,102 @@
+﻿@model IEnumerable<SistControleVendas.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Cliente</h1>
+
+<p>
+    <a asp-action="Create">Cadastrar Novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeCliente)
+
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DtCad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cpf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Endereco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Num)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bairro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CEP)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DtCad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cpf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Endereco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Num)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bairro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CEP)
+            </td>
+            <td>
+                <a asp-action="Edit" class="btn btn-outline-dark" asp-route-id="@item.ClienteID"><i class="bi bi-pencil-fill"></i>Editar</a>
+                <a asp-action="Details" class="btn btn-outline-info" asp-route-id="@item.ClienteID"><i class="bi bi-file-earmark-fill"></i>Detalhes</a> 
+                <a asp-action="Delete" class="btn btn-outline-danger" asp-route-id="@item.ClienteID"><i class="bi bi-trash3-fill"></i>Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

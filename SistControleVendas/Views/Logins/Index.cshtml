@@ -1,0 +1,48 @@
+﻿@model IEnumerable<SistControleVendas.Models.Login>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Login</h1>
+
+<p>
+    <a asp-action="Create">Criar Novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LoginNome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Senha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NivelAcesso)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoginNome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Senha)
+            </td>
+             
+            <td>
+                @Html.DisplayFor(modelItem => item.NivelAcesso)
+            </td>
+            <td>
+                <a asp-action="Edit" class="btn btn-outline-dark" asp-route-id="@item.LoginID"><i class="bi bi-pencil-fill"></i>Editar</a>
+                <a asp-action="Details" class="btn btn-outline-info" asp-route-id="@item.LoginID"><i class="bi bi-file-earmark-fill"></i>Detalhes</a>
+                <a asp-action="Delete" class="btn btn-outline-danger" asp-route-id="@item.LoginID"><i class="bi bi-trash3-fill"></i>Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

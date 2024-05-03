@@ -1,0 +1,36 @@
+﻿@model SistControleVendas.Models.FormaPagto
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>FormaPagto</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CartaoCred)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CartaoCred)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CartaoDeb)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CartaoDeb)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Pix)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Pix)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.FormaPagtoID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

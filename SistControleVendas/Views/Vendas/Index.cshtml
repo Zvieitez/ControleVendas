@@ -1,0 +1,77 @@
+﻿@model IEnumerable<SistControleVendas.Models.Venda>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Vendas</h1>
+
+<p>
+    <a asp-action="Create">Criar Nova</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ColaboradorID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClienteID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataVenda)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Produto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Qtde)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Valor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalVenda)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FormaPgto)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ColaboradorID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClienteID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataVenda)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Produto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Qtde)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Valor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalVenda)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FormaPgto)
+            </td>
+            <td>
+                <a asp-action="Edit" class="btn btn-outline-dark" asp-route-id="@item.VendaID"><i class="bi bi-pencil-fill"></i>Editar</a>
+                <a asp-action="Details" class="btn btn-outline-info" asp-route-id="@item.VendaID"><i class="bi bi-file-earmark-fill"></i>Detalhes</a> 
+                <a asp-action="Delete" class="btn btn-outline-danger" asp-route-id="@item.VendaID"><i class="bi bi-trash3-fill"></i>Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
